@@ -25,3 +25,5 @@ function tini_enqueue_style() {
 }
 
 add_action( 'wp_enqueue_scripts', 'tini_enqueue_style' );
+
+add_theme_support( 'post-thumbnails' );
