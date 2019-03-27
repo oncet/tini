@@ -7,6 +7,84 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tini
 */
 
-body {
-    border: 2px solid;
+.main-container {
+    font-family: 'Roboto', sans-serif;
+    max-width: 1280px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.menu {
+    float: left;
+    margin: 0;
+    padding: 2em;
+    min-width: 18em;
+}
+
+.menu li {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+.menu a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    padding: 0.3em;
+    color: #3f51b5;
+    display: inline-block;
+}
+
+.menu > li:nth-child(1) a {
+    border: none;
+}
+
+.content {
+    overflow: hidden;
+    min-width: 425px;
+}
+
+.category h2 {
+    margin-bottom: 0;
+    background: #3f51b5;
+    color: #fff;
+    padding-left: 1em;
+}
+
+.category article {
+    margin-top: 1em;
+}
+
+.category article h2 {
+    margin-top: 0;
+}
+
+.category article img {
+    max-width: 100%;
+}
+
+.category article a {
+    text-decoration: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .single article {
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .single article {
+        overflow: hidden;
+        min-width: 768px;
+    }
+}
+
+.sl-navigation button {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 40px;
+    color: #fff !important;
 }
