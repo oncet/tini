@@ -52,6 +52,10 @@ Text Domain: tini
     overflow: hidden;
 }
 
+.content a {
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .content {
         width: 100%;
