@@ -4,7 +4,7 @@
  * Check if the Timber plugin is loaded.
  */
 if(!class_exists('Timber')) {
-    add_action( 'admin_notices', function() {
+    add_action('admin_notices', function() {
         echo '<div class="error"><p><strong>Tini</strong> requires the <a href="https://github.com/timber/timber">Timber</a> plugin.</p></div>';
     });
 
@@ -18,12 +18,24 @@ if(!class_exists('Timber')) {
 Timber::$dirname = ['views'];
 
 /**
- * Load the style.css file.
+ * Load style.css file.
  */
 function tini_enqueue_style() {
-    wp_enqueue_style( 'tini-style', get_stylesheet_uri() ); 
+    wp_enqueue_style('tini-style', get_stylesheet_uri()); 
 }
 
-add_action( 'wp_enqueue_scripts', 'tini_enqueue_style' );
+add_action('wp_enqueue_scripts', 'tini_enqueue_style');
 
-add_theme_support( 'post-thumbnails' );
+/**
+ * Register navigation menu.
+ */
+function tini_register_menus() {
+  register_nav_menu('main-menu',__( 'Main menu' ));
+}
+
+add_action('init', 'tini_register_menus');
+
+/**
+ * Add post thumbnails support.
+ */
+add_theme_support('post-thumbnails');

@@ -18,24 +18,38 @@ Text Domain: tini
     float: left;
     margin: 0;
     padding: 0;
-    min-width: 18em;
+    width: 22em;
 }
 
 .menu li {
     list-style-type: none;
-    margin-bottom: 0.5em;
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid white;
 }
 
 .menu a {
-    border-bottom: 1px dotted;
     text-decoration: none;
     display: inline-block;
-    padding: 0.5em 1em;
+}
+
+.sub-menu {
+    display: none;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+}
+
+.menu .current-menu-item,
+.menu .current-post-parent {
+    font-weight: bold;
+}
+
+.menu > .current-menu-item:first-child {
+    font-weight: normal;
 }
 
 .content {
     overflow: hidden;
-    padding-left: 1em;
 }
 
 @media (max-width: 768px) {
