@@ -1,4 +1,4 @@
-# tini
+# Tini
 A WordPress theme using Timber.
 
 ## Dependencies
