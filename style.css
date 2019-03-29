@@ -56,6 +56,10 @@ Text Domain: tini
     text-decoration: none;
 }
 
+.content li {
+    list-style-type: square;
+}
+
 @media (max-width: 768px) {
     .content {
         width: 100%;
