@@ -38,6 +38,6 @@ add_action('init', 'tini_register_menus');
 /**
  * Add post thumbnails support.
  */
-add_theme_support('post-thumbnails
+add_theme_support('post-thumbnails');
 
 wp_enqueue_script('jquery');
