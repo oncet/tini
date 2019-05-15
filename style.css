@@ -15,6 +15,10 @@ Text Domain: tini
     overflow: hidden;
 }
 
+pre {
+    font-family: sans-serif;
+}
+
 .menu {
     float: left;
     margin: 0;
