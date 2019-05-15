@@ -18,13 +18,14 @@ if(!class_exists('Timber')) {
 Timber::$dirname = ['views'];
 
 /**
- * Load style.css file.
+ * Load style.css and jQuery.
  */
-function tini_enqueue_style() {
+function tini_enqueue_scripts_and_styles() {
     wp_enqueue_style('tini-style', get_stylesheet_uri()); 
+    wp_enqueue_script('jquery');
 }
 
-add_action('wp_enqueue_scripts', 'tini_enqueue_style');
+add_action('wp_enqueue_scripts', 'tini_enqueue_scripts_and_styles');
 
 /**
  * Register navigation menu.
@@ -39,5 +40,3 @@ add_action('init', 'tini_register_menus');
  * Add post thumbnails support.
  */
 add_theme_support('post-thumbnails');
-
-wp_enqueue_script('jquery');
