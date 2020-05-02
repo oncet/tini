@@ -94,3 +94,10 @@ pre {
 .post img {
     max-width: 100%;
 }
+
+.rot-main-container {
+    max-width: 480px;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.5em;
+}
