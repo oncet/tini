@@ -1,8 +1,10 @@
 <?php
-/* Template Name: Link Rot */
+/**
+ * Template Name: Link Rot
+ */
 
 $context = Timber::context();
 
 $context['posts'] = new Timber\PostQuery();
 
-Timber::render(['index.twig'], $context);
+Timber::render(['rot-template.twig'], $context);
